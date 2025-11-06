@@ -5,9 +5,9 @@ app.secret_key = '15c5c5a0cec05dcbc587d5d1ff176a6625f489ef9e7b3899c89a63f3b8de1e
 
 # --- MySQL Database Configuration ---
 db = mysql.connector.connect(
-    host="localhost",
+    host="mysql-container",
     user="root",
-    password="root",   # change this
+    password="rootpass",   # change this
     database="flask_db"         # change this
 )
 
@@ -55,7 +55,7 @@ def register():
     return render_template('register.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=5000,debug=True)
 
 
 
