@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | AtlasNova Portal</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #1e293b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin-left: 20px;
+    }
+
+    .profile-container {
+      max-width: 600px;
+      background-color: white;
+      margin: 60px auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .profile-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      font-size: 60px;
+      color: #475569;
+    }
+
+    .profile-name {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .profile-email {
+      font-size: 16px;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    .profile-actions a {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 8px;
+    }
+
+    .profile-actions a:hover {
+      background-color: #1e40af;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo"><strong>AtlasNova</strong></div>
+    <div class="nav-links">
+      <a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+      <a href="profile.html"><i class="fa-solid fa-user-circle"></i> Profile</a>
+      <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+  </div>
+
+  <div class="profile-container">
+    <div class="profile-avatar">
+      <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="profile-name">Kangane Machhindrath</div>
+    <div class="profile-email">mac.kangane@gmail.com</div>
+    <hr style="margin: 20px 0;">
+    <div class="profile-actions">
+      <a href="#">Edit Profile</a>
+      <a href="#">Change Password</a>
+    </div>
+  </div>
+</body>
+</html>

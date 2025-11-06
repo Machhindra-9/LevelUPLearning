@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LevelUP | Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #fff;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #4e54c8;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #4e54c8;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 40px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* Courses Section */
+    .courses {
+      padding: 50px;
+    }
+
+    .courses h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .course-card .content {
+      padding: 15px;
+    }
+
+    .course-card h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .course-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .enroll-btn {
+      display: inline-block;
+      background: #4e54c8;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .enroll-btn:hover {
+      background: #3e43a5;
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      padding: 20px 50px;
+      text-align: center;
+      border-top: 1px solid #e0e0e0;
+      color: #555;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LevelUP</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for courses, topics, or instructors">
+    </div>
+    <nav>
+      <nav>
+        <nav>
+  <a href="#">Home</a>
+  <a href="#">Courses</a>
+  <a href="#">My Learning</a>
+  <a href="#" title="Profile">
+  <i class="fa-solid fa-user-circle"></i>
+</a>
+
+</a>
+</nav>
+
+      </nav>
+
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Upgrade Your Skills with LevelUP</h2>
+    <p>Explore industry-ready courses curated by experts</p>
+  </section>
+
+  <section class="courses">
+    <h3>Popular Courses</h3>
+    <div class="course-grid">
+      <div class="course-card">
+        <img src="https://source.unsplash.com/600x400/?programming" alt="Programming">
+        <div class="content">
+          <h4>Mastering Python for Beginners</h4>
+          <p>Learn Python from scratch and build real-world projects.</p>
+          <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="https://source.unsplash.com/600x400/?cloud,technology" alt="Cloud">
+        <div class="content">
+          <h4>Cloud Computing Fundamentals</h4>
+          <p>Understand AWS, Azure, and GCP from a DevOps perspective.</p>
+          <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="https://source.unsplash.com/600x400/?cybersecurity,hacking" alt="Cybersecurity">
+        <div class="content">
+          <h4>Cybersecurity Essentials</h4>
+          <p>Secure systems and networks from cyber threats.</p>
+          <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="https://source.unsplash.com/600x400/?data,analytics" alt="Data">
+        <div class="content">
+          <h4>Data Analytics with Power BI</h4>
+          <p>Visualize and analyze business data efficiently.</p>
+          <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 LevelUP Learning. All rights reserved.
+  </footer>
+
+</body>
+</html>
