@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS flask_db;
+
+USE flask_db;
+
+CREATE TABLE IF NOT EXISTS users (
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+

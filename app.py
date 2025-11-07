@@ -1,15 +1,31 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
+import time
+from mysql.connector import Error
 app = Flask(__name__)
 app.secret_key = '15c5c5a0cec05dcbc587d5d1ff176a6625f489ef9e7b3899c89a63f3b8de1e47'
 
-# --- MySQL Database Configuration ---
-db = mysql.connector.connect(
-    host="mysql-container",
-    user="root",
-    password="rootpass",   # change this
-    database="flask_db"         # change this
-)
+# Retry settings
+max_retries = 10
+retry_delay = 5  # seconds
+
+for attempt in range(max_retries):
+    try:
+        db = mysql.connector.connect(
+            host="db",           # Service name from Docker Compose
+            user="root",
+            password="rootpass",
+            database="flask_db"
+        )
+        print("Connected to MySQL!")
+        break  # Success, exit the loop
+    except Error as e:
+        print(f"Attempt {attempt + 1}: MySQL not ready, retrying in {retry_delay}s...")
+        time.sleep(retry_delay)
+else:
+    # If all retries fail
+    print("Failed to connect to MySQL after several attempts.")
+    exit(1)
 
 @app.route('/')
 def home():
