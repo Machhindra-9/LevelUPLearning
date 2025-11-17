@@ -5,7 +5,7 @@ pipeline{
         stage('code'){
             steps{
                 script{
-                    call()
+                    call("mac")
                 }
             }
         }
